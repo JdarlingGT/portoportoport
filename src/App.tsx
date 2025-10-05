@@ -14,6 +14,7 @@ import ProjectDetail from './pages/ProjectDetail';
 import ClinicalCompass from './pages/apps/ClinicalCompass';
 import ROICalculator from './pages/apps/ROICalculator';
 import LicenseRequirements from './pages/apps/LicenseRequirements';
+import SmartPricing from './pages/apps/SmartPricing';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
@@ -76,6 +77,7 @@ function App() {
           <Route path="/apps/clinical-compass" element={<ClinicalCompass />} />
           <Route path="/apps/roi" element={<ROICalculator />} />
           <Route path="/apps/license" element={<LicenseRequirements />} />
+          <Route path="/apps/smart-pricing" element={<SmartPricing />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/cv" element={<Navigate to="/resume" replace />} />
           <Route path="/contact" element={<Contact />} />

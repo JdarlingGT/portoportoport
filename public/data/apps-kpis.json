@@ -19,5 +19,12 @@
       { "label": "Lookup speed (p95)", "value": "190ms" },
       { "label": "Copy-to-clipboard", "value": "63%" }
     ]
+  },
+  "smart-pricing": {
+    "chips": [
+      { "label": "Pricing scenarios", "value": "24" },
+      { "label": "Avg config time", "value": "2m 45s" },
+      { "label": "Export rate", "value": "78%" }
+    ]
   }
 }

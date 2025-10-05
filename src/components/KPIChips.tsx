@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 type Chip = { label: string; value: string };
-type AppKey = "clinical-compass" | "roi-calculator" | "license-requirements";
+type AppKey = "clinical-compass" | "roi-calculator" | "license-requirements" | "smart-pricing";
 
 export default function KPIChips({ app }: { app: AppKey }) {
   const [chips, setChips] = useState<Chip[]>([]);

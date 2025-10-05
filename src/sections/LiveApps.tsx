@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Calculator, Compass, FileText, ArrowRight } from 'lucide-react';
+import { Calculator, Compass, FileText, DollarSign, ArrowRight } from 'lucide-react';
 
 const apps = [
   {
@@ -29,6 +29,15 @@ const apps = [
     stats: ["50 states covered", "190ms lookup", "63% clipboard use"],
     gradient: "from-purple-500/20 to-pink-500/20",
     border: "border-purple-500/30"
+  },
+  {
+    title: "Smart Pricing Tool",
+    description: "Dynamic pricing scenarios and sales configuration",
+    icon: DollarSign,
+    href: "/apps/smart-pricing",
+    stats: ["24 pricing scenarios", "2m 45s config time", "78% export rate"],
+    gradient: "from-orange-500/20 to-red-500/20",
+    border: "border-orange-500/30"
   }
 ];
 
