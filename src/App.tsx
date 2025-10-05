@@ -8,6 +8,7 @@ import Toolbox from './pages/Toolbox';
 import CaseStudies from './pages/CaseStudies';
 import DeepDive from './pages/DeepDive';
 import Projects from './pages/Projects';
+import ProjectDetail from './pages/ProjectDetail';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
@@ -64,6 +65,7 @@ function App() {
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/deep/:slug" element={<DeepDive />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:id" element={<ProjectDetail />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/cv" element={<Navigate to="/resume" replace />} />
           <Route path="/contact" element={<Contact />} />
