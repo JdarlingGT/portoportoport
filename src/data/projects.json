@@ -1,0 +1,20 @@
+[
+  {
+    "title": "AI-Powered Content Assistant",
+    "summary": "A custom-trained AI assistant that helps generate and refine marketing copy, integrated directly into a headless CMS.",
+    "tech": ["OpenAI API", "Next.js", "Vercel Edge Functions"],
+    "links": {
+      "demo": "#",
+      "repo": "#"
+    }
+  },
+  {
+    "title": "Real-Time Performance Dashboard",
+    "summary": "A dashboard that visualizes Core Web Vitals and other performance metrics in real-time for a fleet of websites.",
+    "tech": ["Grafana", "Prometheus", "Lighthouse CI"],
+    "links": {
+      "demo": "#",
+      "repo": "#"
+    }
+  }
+]

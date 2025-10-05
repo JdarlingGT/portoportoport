@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "slug": "the-launchpad",
+    "title": "The Launchpad: A Next-Gen Marketing Automation Platform",
+    "subtitle": "Building a scalable marketing automation system from the ground up.",
+    "category": "Automation",
+    "image": "/assets/case-studies/launchpad.png",
+    "roi": 150
+  },
+  {
+    "id": 2,
+    "slug": "the-guardian",
+    "title": "The Guardian: Enterprise-Grade Security Framework",
+    "subtitle": "Implementing a robust security posture for a high-traffic e-commerce site.",
+    "category": "E-commerce",
+    "image": "/assets/case-studies/guardian.png",
+    "roi": 0
+  },
+  {
+    "id": 3,
+    "slug": "the-compass",
+    "title": "The Compass: Advanced Analytics & Attribution Modeling",
+    "subtitle": "Developing a multi-touch attribution model to clarify marketing ROI.",
+    "category": "Analytics",
+    "image": "/assets/case-studies/compass.png",
+    "roi": 200
+  }
+]

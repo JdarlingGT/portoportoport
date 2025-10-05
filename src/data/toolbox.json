@@ -1,0 +1,50 @@
+{
+  "CurrentSetup": [
+    "VS Code",
+    "iTerm2 + Oh My Zsh",
+    "Figma",
+    "Notion"
+  ],
+  "Frontend": [
+    {
+      "name": "React & Next.js",
+      "role": "Primary Framework",
+      "why": "For building scalable, high-performance web applications.",
+      "link": "https://nextjs.org"
+    },
+    {
+      "name": "Tailwind CSS",
+      "role": "CSS Framework",
+      "why": "For rapid, utility-first styling.",
+      "link": "https://tailwindcss.com"
+    }
+  ],
+  "Backend": [
+    {
+      "name": "Node.js & Express",
+      "role": "Server-side Runtime",
+      "why": "For building fast and scalable network applications.",
+      "link": "https://nodejs.org"
+    },
+    {
+      "name": "PostgreSQL",
+      "role": "Database",
+      "why": "A powerful, open-source object-relational database system.",
+      "link": "https://www.postgresql.org"
+    }
+  ],
+  "DevOps & Hosting": [
+    {
+      "name": "Vercel",
+      "role": "Hosting Platform",
+      "why": "For seamless Next.js deployments and serverless functions.",
+      "link": "https://vercel.com"
+    },
+    {
+      "name": "Docker",
+      "role": "Containerization",
+      "why": "For consistent development and production environments.",
+      "link": "https://www.docker.com"
+    }
+  ]
+}
