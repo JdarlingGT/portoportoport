@@ -1,4 +1,3 @@
-import React from 'react';
 import toolbox from "../data/toolbox.json";
 
 export default function Toolbox() {

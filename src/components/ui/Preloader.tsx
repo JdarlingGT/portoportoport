@@ -1,5 +1,5 @@
-import React, { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import AnimatedLogo from "./AnimatedLogo";
 
 export default function Preloader() {

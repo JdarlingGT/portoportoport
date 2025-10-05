@@ -1,4 +1,3 @@
-import React from 'react';
 import Breadcrumbs from "../components/ui/Breadcrumbs";
 import data from "../data/projects.json";
 

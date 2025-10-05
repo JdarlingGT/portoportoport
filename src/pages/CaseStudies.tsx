@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import Breadcrumbs from "../components/ui/Breadcrumbs";
 import data from "../data/caseStudies.json";
@@ -41,7 +41,7 @@ export default function CaseStudies() {
 
         <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once:true }}
           className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {items.map((i, idx) => (
+          {items.map((i) => (
             <motion.article key={i.id} variants={slideUp}
               className="rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:bg-white/10 transition">
               <div className="h-44 overflow-hidden">

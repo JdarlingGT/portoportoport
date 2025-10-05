@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { buildSearchIndex, SearchDoc } from "../../lib/search-index";
 
 export default function SearchModal({ open, onClose }:{ open:boolean; onClose:()=>void }) {
