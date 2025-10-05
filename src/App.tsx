@@ -18,17 +18,6 @@ import Header from './components/layout/Header';
 import Preloader from './components/ui/Preloader';
 import Footer from './components/layout/Footer';
 
-const AppLayout = () => (
-  <>
-    <Preloader />
-    <Header />
-    <main>
-      <Outlet />
-    </main>
-    <Footer />
-  </>
-);
-
 function useGA(){
   const { pathname, search } = useLocation();
   useEffect(() => {
@@ -37,8 +26,21 @@ function useGA(){
   }, [pathname, search]);
 }
 
-function App() {
+const AppLayout = () => {
   useGA();
+  return (
+    <>
+      <Preloader />
+      <Header />
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
+    </>
+  );
+};
+
+function App() {
   return (
     <BrowserRouter>
       <Routes>
