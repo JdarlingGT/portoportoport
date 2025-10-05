@@ -13,7 +13,8 @@
     "details": {
       "challenge": "Support team spending significant time on repetitive questions about order status, course prerequisites, and CEU rules, creating bottlenecks and slowing response times.",
       "solution": "Architected AI-powered chatbot integrated with WooCommerce, LearnDash, and FluentCRM via Cloudflare Workers for personalized, context-aware responses.",
-      "technologies": ["OpenAI", "Cloudflare Workers", "WooCommerce", "LearnDash", "FluentCRM"]
+      "technologies": ["OpenAI", "Cloudflare Workers", "WooCommerce", "LearnDash", "FluentCRM"],
+      "toolboxLinks": ["Training Lifecycle Automation", "Commerce + Learning Systems Architecture"]
     }
   },
   {
@@ -28,9 +29,10 @@
     "impact": "Visible lift in provider engagement",
     "featured": true,
     "details": {
-      "challenge": "Provider directory members had no way of knowing if their listing was working, risking constant churn without ROI proof.",
-      "solution": "Built custom analytics dashboard syncing GA4 API to display views, clicks, traffic sources, and benchmarks against peer averages.",
-      "technologies": ["GA4 API", "WordPress", "Custom Analytics", "Data Visualization"]
+      "challenge": "Providers needed clear visibility into their performance metrics and ROI to justify continued membership investment.",
+      "solution": "Built comprehensive analytics dashboard with GA4 integration, custom event tracking, and automated reporting for member engagement insights.",
+      "technologies": ["GA4", "Google Tag Manager", "Custom Dashboards", "WordPress", "Data Visualization"],
+      "toolboxLinks": ["Analytics & Conversion Engineering", "Ops, Dashboards & Content Systems"]
     }
   },
   {
@@ -62,9 +64,10 @@
     "impact": "86% cache hit ratio, 85K+ malicious hits blocked monthly",
     "featured": false,
     "details": {
-      "challenge": "High-traffic WordPress site under constant siege from bots, brute-force attacks, and scrapers causing server strain and security vulnerabilities.",
-      "solution": "Comprehensive Cloudflare security implementation with WAF, rate limiting, Bot Fight Mode, and tiered caching for proactive edge-first defense.",
-      "technologies": ["Cloudflare", "WAF", "Edge Computing", "Rate Limiting", "Bot Protection"]
+      "challenge": "E-commerce site vulnerable to attacks and needed robust security measures without impacting legitimate user experience.",
+      "solution": "Deployed multi-layered security architecture with WAF rules, bot protection, rate limiting, and real-time threat monitoring.",
+      "technologies": ["CloudFlare WAF", "Bot Protection", "Rate Limiting", "Security Headers", "SSL/TLS"],
+      "toolboxLinks": ["Security & Resilience", "Edge-First Security Hardening"]
     }
   },
   {
@@ -75,13 +78,14 @@
     "category": "Operations & Tools",
     "tags": ["Dashboard", "Events", "Instructor Tools", "Data Aggregation", "Operations"],
     "icon": "BarChart3",
-    "description": "A unified administrative dashboard for data-driven event management and instructor empowerment with real-time insights.",
-    "impact": "Time-to-insight reduced from hours to minutes",
+    "description": "Complete analytics rebuild creating single source of truth for conversion data and eliminating attribution drift.",
+    "impact": "Significant improvement in marketing efficiency and ROAS",
     "featured": false,
     "details": {
-      "challenge": "Events team and instructors lacked centralized, real-time view of event performance, making it difficult to identify at-risk courses and prepare effectively.",
-      "solution": "Built unified Events Hub consolidating LearnDash, WooCommerce, and FluentCRM data with enrollment velocity indicators and detailed attendee breakdowns.",
-      "technologies": ["LearnDash", "WooCommerce", "FluentCRM", "REST API", "Custom Dashboard"]
+      "challenge": "Marketing attribution was unclear, making it difficult to optimize ad spend and understand true conversion paths.",
+      "solution": "Implemented server-side tracking with enhanced e-commerce events, custom attribution models, and cross-platform data integration.",
+      "technologies": ["GA4", "Server-side Tracking", "Enhanced E-commerce", "Attribution Modeling", "Data Layer"],
+      "toolboxLinks": ["Analytics & Conversion Engineering", "Attribution That Trains Media the Right Way"]
     }
   },
   {
@@ -210,14 +214,15 @@
     "subtitle": "Intelligent Lead Conversion Tracking",
     "category": "Marketing & Conversions",
     "tags": ["Lead Qualification", "Conversions", "PHP", "GTM", "Smart Bidding"],
-    "icon": "Target",
-    "description": "Refined conversion model distinguishing high-value leads from low-intent inquiries for optimized ad spend allocation.",
-    "impact": "Dramatically improved conversion accuracy and lead quality",
+    "icon": "Server",
+    "description": "Deep server-level optimization eliminating 503/504 errors and PHP memory exhaustion for stable operations.",
+    "impact": "Critical backend errors eliminated, platform stability restored",
     "featured": false,
     "details": {
-      "challenge": "Analytics treating all form submissions equally, causing Google Ads to waste budget on low-intent inquiries instead of marketing-qualified leads.",
-      "solution": "Built custom PHP hook firing detailed events to dataLayer with GTM RegEx triggers filtering for high-value form IDs and MQL conversion actions.",
-      "technologies": ["PHP", "Google Tag Manager", "RegEx", "Google Ads", "Conversion Tracking"]
+      "challenge": "Website experiencing slow load times and poor performance scores, affecting user experience and search rankings.",
+      "solution": "Implemented comprehensive performance optimization including CDN setup, image optimization, caching strategies, and code splitting.",
+      "technologies": ["CloudFlare", "WebP", "Lazy Loading", "Cache Optimization", "Performance Monitoring"],
+      "toolboxLinks": ["Web Performance & Optimization", "Edge-First Security Hardening"]
     }
   },
   {

@@ -54,6 +54,88 @@ html {
   }
 }
 
+/* Enhanced deep dive content styling */
+.deep-dive-content h2 {
+  @apply text-2xl font-bold mt-12 mb-6 text-cyan-400 border-b border-white/10 pb-3;
+}
+
+.deep-dive-content h3 {
+  @apply text-xl font-bold mt-8 mb-4 text-white;
+}
+
+.deep-dive-content h4 {
+  @apply text-lg font-semibold mt-6 mb-3 text-slate-200;
+}
+
+.deep-dive-content p {
+  @apply mb-6 leading-relaxed text-slate-300;
+}
+
+.deep-dive-content ul, .deep-dive-content ol {
+  @apply mb-6 space-y-2;
+}
+
+.deep-dive-content li {
+  @apply text-slate-300 leading-relaxed;
+}
+
+.deep-dive-content ul li {
+  @apply relative pl-6;
+}
+
+.deep-dive-content ul li::before {
+  content: "•";
+  @apply absolute left-0 text-cyan-400 font-bold;
+}
+
+.deep-dive-content ol li {
+  @apply relative pl-6;
+}
+
+.deep-dive-content blockquote {
+  @apply border-l-4 border-cyan-400 pl-6 py-4 my-6 bg-white/5 rounded-r-lg italic text-slate-300;
+}
+
+.deep-dive-content code {
+  @apply bg-white/10 px-2 py-1 rounded text-cyan-300 text-sm font-mono;
+}
+
+.deep-dive-content pre {
+  @apply bg-white/5 border border-white/10 rounded-lg p-4 overflow-x-auto mb-6;
+}
+
+.deep-dive-content pre code {
+  @apply bg-transparent p-0 text-slate-200;
+}
+
+.deep-dive-content strong {
+  @apply font-bold text-white;
+}
+
+.deep-dive-content em {
+  @apply italic text-slate-200;
+}
+
+.deep-dive-content a {
+  @apply text-cyan-400 hover:text-cyan-300 underline transition-colors;
+}
+
+.deep-dive-content table {
+  @apply w-full border-collapse border border-white/10 rounded-lg overflow-hidden mb-6;
+}
+
+.deep-dive-content th, .deep-dive-content td {
+  @apply border border-white/10 px-4 py-3 text-left;
+}
+
+.deep-dive-content th {
+  @apply bg-white/5 font-semibold text-cyan-400;
+}
+
+.deep-dive-content td {
+  @apply text-slate-300;
+}
+
 /* Print Styles */
 @media print {
   body { 
