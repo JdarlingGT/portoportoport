@@ -36,7 +36,13 @@ const Header = () => {
                 <Search className="w-4 h-4" />
                 <span>Search /</span>
               </button>
-              <div className="hidden md:block">
+              <div className="hidden md:flex items-center space-x-3">
+                <Link
+                  to="/platform"
+                  className="rounded-xl px-3 py-2 bg-white/10 text-sm font-semibold text-white hover:bg-white/20 transition-colors"
+                >
+                  Platform
+                </Link>
                 <Link
                   to="/resume"
                   className="rounded-xl px-4 py-2 bg-white/10 text-sm font-semibold text-white hover:bg-white/20 transition-colors"

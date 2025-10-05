@@ -48,7 +48,7 @@ const MegaMenu = () => {
               onMouseLeave={() => setIsOpen(false)}
               className="absolute top-full left-0 mt-2 w-[500px] bg-black/90 backdrop-blur-lg border border-white/10 rounded-xl shadow-2xl z-50"
             >
-              <div className="grid grid-cols-3 gap-6 p-6">
+              <div className="grid grid-cols-4 gap-6 p-6">
                 {menuConfig.columns.map((column: MenuColumn) => (
                   <div key={column.label} className="space-y-3">
                     <h3 className="text-white font-bold text-sm uppercase tracking-wide">

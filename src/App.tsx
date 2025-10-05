@@ -12,6 +12,19 @@ import Resume from './pages/Resume';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 
+// Import MarTech Stack Pages
+import MarTechStack from './pages/MarTechStack';
+import EnterpriseSecurity from './pages/martech/EnterpriseSecurity';
+import PerformanceOptimization from './pages/martech/PerformanceOptimization';
+import MarketingAnalytics from './pages/martech/MarketingAnalytics';
+import LeadConversion from './pages/martech/LeadConversion';
+import InteractiveMaps from './pages/martech/InteractiveMaps';
+import BackendReliability from './pages/martech/BackendReliability';
+
+// Import Platform Pages
+import PlatformOverview from './pages/PlatformOverview';
+import PlatformDemo from './pages/PlatformDemo';
+
 // Import Layout
 import Header from './components/layout/Header';
 import Preloader from './components/ui/Preloader';
@@ -54,6 +67,20 @@ function App() {
           <Route path="/resume" element={<Resume />} />
           <Route path="/cv" element={<Navigate to="/resume" replace />} />
           <Route path="/contact" element={<Contact />} />
+          
+          {/* MarTech Stack Routes */}
+          <Route path="/martech" element={<MarTechStack />} />
+          <Route path="/martech/enterprise-security" element={<EnterpriseSecurity />} />
+          <Route path="/martech/performance-optimization" element={<PerformanceOptimization />} />
+          <Route path="/martech/marketing-analytics" element={<MarketingAnalytics />} />
+          <Route path="/martech/lead-conversion" element={<LeadConversion />} />
+          <Route path="/martech/interactive-maps" element={<InteractiveMaps />} />
+          <Route path="/martech/backend-reliability" element={<BackendReliability />} />
+          
+          {/* Platform Routes */}
+          <Route path="/platform" element={<PlatformOverview />} />
+          <Route path="/platform/demo" element={<PlatformDemo />} />
+          
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

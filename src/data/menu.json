@@ -23,6 +23,14 @@
       ]
     },
     {
+      "label": "Platform",
+      "links": [
+        { "label": "Overview", "href": "/platform" },
+        { "label": "Run Live Demo", "href": "/platform/demo" },
+        { "label": "Schedule Walkthrough", "href": "/contact" }
+      ]
+    },
+    {
       "label": "Projects & Tools",
       "links": [
         { "label": "Technical Projects", "href": "/projects" },
