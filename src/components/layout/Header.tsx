@@ -41,7 +41,7 @@ const Header = () => {
                   to="/resume"
                   className="rounded-xl px-4 py-2 bg-white/10 text-sm font-semibold text-white hover:bg-white/20 transition-colors"
                 >
-                  Download CV
+                  Download Résumé
                 </Link>
               </div>
             </div>

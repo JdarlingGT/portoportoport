@@ -5,8 +5,9 @@ import fm from "front-matter";
 import AnchorTOC from "../components/ui/AnchorTOC";
 import Breadcrumbs from "../components/ui/Breadcrumbs";
 
-export default function DeepDive() {
-  const { slug } = useParams<{ slug: string }>();
+export default function DeepDive({ slug: propSlug }: { slug?: string }) {
+  const params = useParams<{ slug: string }>();
+  const slug = propSlug ?? params.slug;
   const [html, setHtml] = useState("");
   const [frontMatter, setFrontMatter] = useState<any>({});
 
@@ -15,7 +16,10 @@ export default function DeepDive() {
 
     const fetchContent = async () => {
       try {
-        const res = await fetch(`/content/deep-dives/${slug}.md`, { cache: 'no-store' });
+        const res = await fetch(`/content/deep-dives/${slug}.md`);
+        if (!res.ok) {
+          throw new Error(`Failed to fetch: ${res.status}`);
+        }
         const markdown = await res.text();
         
         const content: any = fm(markdown);

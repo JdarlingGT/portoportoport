@@ -1,28 +1,82 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+
+const anchors = [
+  { id: 'story', label: 'My Story' },
+  { id: 'principles', label: 'Principles' },
+  { id: 'stack', label: 'MarTech Stack' },
+  { id: 'journey', label: 'Journey' },
+  { id: 'partnerships', label: 'Partnerships' },
+  { id: 'testimonials', label: 'Testimonials' },
+  { id: 'contact', label: 'Contact' }
+];
 
 export default function AnchorTOC() {
-  const [ids, setIds] = useState<{id:string; text:string}[]>([]);
+  const [activeSection, setActiveSection] = useState('');
+
   useEffect(() => {
-    // Give content a moment to render before scanning for headings
-    const timer = setTimeout(() => {
-      const headings = Array.from(document.querySelectorAll("main h2, main h3"))
-        .filter(el => el.id)
-        .map(el => ({ id: el.id, text: (el as HTMLElement).innerText }));
-      setIds(headings as any);
-    }, 100);
-    return () => clearTimeout(timer);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.3, rootMargin: '-20% 0px -70% 0px' }
+    );
+
+    anchors.forEach(({ id }) => {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
-  if (!ids.length) return null;
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   return (
-    <aside className="hidden lg:block sticky top-24 text-sm text-gray-300">
-      <p className="uppercase tracking-wide text-gray-400 mb-2">On this page</p>
-      <ul className="space-y-1">
-        {ids.map(h => (
-          <li key={h.id}><a href={`#${h.id}`} className="hover:text-accentCyan">{h.text}</a></li>
+    <>
+      {/* Desktop Sticky TOC */}
+      <nav className="hidden lg:block sticky top-32 space-y-2">
+        {anchors.map(({ id, label }) => (
+          <motion.button
+            key={id}
+            onClick={() => scrollToSection(id)}
+            className={`block w-full text-left px-3 py-2 text-sm rounded-lg transition-colors ${
+              activeSection === id
+                ? 'bg-white/10 text-white'
+                : 'text-gray-400 hover:text-white hover:bg-white/5'
+            }`}
+            whileHover={{ x: 4 }}
+          >
+            {label}
+          </motion.button>
         ))}
-      </ul>
-    </aside>
+      </nav>
+
+      {/* Mobile Horizontal Chips */}
+      <div className="lg:hidden flex gap-2 overflow-x-auto pb-2 mb-6">
+        {anchors.map(({ id, label }) => (
+          <button
+            key={id}
+            onClick={() => scrollToSection(id)}
+            className={`flex-shrink-0 px-3 py-1 text-xs rounded-full transition-colors ${
+              activeSection === id
+                ? 'bg-white/20 text-white'
+                : 'bg-white/5 text-gray-400 hover:text-white hover:bg-white/10'
+            }`}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
+    </>
   );
 }

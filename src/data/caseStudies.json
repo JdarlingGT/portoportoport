@@ -2,28 +2,256 @@
   {
     "id": 1,
     "slug": "the-launchpad",
-    "title": "The Launchpad: A Next-Gen Marketing Automation Platform",
-    "subtitle": "Building a scalable marketing automation system from the ground up.",
-    "category": "Automation",
-    "image": "/assets/case-studies/launchpad.png",
-    "roi": 150
+    "title": "The Launchpad",
+    "subtitle": "AI-Powered Chatbot & CRM Integration",
+    "category": "AI & Automation",
+    "tags": ["AI", "Chatbot", "CRM", "Integration", "Support"],
+    "icon": "Rocket",
+    "description": "An intelligent, self-service support system that boosts efficiency and enhances the customer experience through CRM-aware AI assistance.",
+    "impact": "70% reduction in support tickets",
+    "featured": true,
+    "details": {
+      "challenge": "Support team spending significant time on repetitive questions about order status, course prerequisites, and CEU rules, creating bottlenecks and slowing response times.",
+      "solution": "Architected AI-powered chatbot integrated with WooCommerce, LearnDash, and FluentCRM via Cloudflare Workers for personalized, context-aware responses.",
+      "technologies": ["OpenAI", "Cloudflare Workers", "WooCommerce", "LearnDash", "FluentCRM"]
+    }
   },
   {
     "id": 2,
     "slug": "the-guardian",
-    "title": "The Guardian: Enterprise-Grade Security Framework",
-    "subtitle": "Implementing a robust security posture for a high-traffic e-commerce site.",
-    "category": "E-commerce",
-    "image": "/assets/case-studies/guardian.png",
-    "roi": 0
+    "title": "The Guardian",
+    "subtitle": "Provider Directory & Analytics Dashboard",
+    "category": "Analytics & Insights",
+    "tags": ["Analytics", "Dashboard", "GA4", "ROI", "Member Retention"],
+    "icon": "Shield",
+    "description": "A data-driven dashboard that proves ROI and drives member retention through clear performance insights and benchmarking.",
+    "impact": "Visible lift in provider engagement",
+    "featured": true,
+    "details": {
+      "challenge": "Provider directory members had no way of knowing if their listing was working, risking constant churn without ROI proof.",
+      "solution": "Built custom analytics dashboard syncing GA4 API to display views, clicks, traffic sources, and benchmarks against peer averages.",
+      "technologies": ["GA4 API", "WordPress", "Custom Analytics", "Data Visualization"]
+    }
   },
   {
     "id": 3,
     "slug": "the-compass",
-    "title": "The Compass: Advanced Analytics & Attribution Modeling",
-    "subtitle": "Developing a multi-touch attribution model to clarify marketing ROI.",
-    "category": "Analytics",
-    "image": "/assets/case-studies/compass.png",
-    "roi": 200
+    "title": "The Compass",
+    "subtitle": "GTM & GA4 Data Layer Revamp",
+    "category": "Analytics & Attribution",
+    "tags": ["GA4", "GTM", "Attribution", "Data Layer", "ROAS"],
+    "icon": "Compass",
+    "description": "Building a foundation of truth for accurate, data-driven marketing decisions through normalized event tracking and clean attribution.",
+    "impact": "Significant ROAS lift achieved",
+    "featured": true,
+    "details": {
+      "challenge": "Messy GTM container, legacy tags, and inconsistent event tracking made data unreliable, leading to wasted ad spend and poor attribution.",
+      "solution": "Complete data layer revamp with normalized event schema and server-side PHP hooks for clean, reliable data flow to GTM and GA4.",
+      "technologies": ["Google Tag Manager", "GA4", "Server-side Tracking", "PHP", "Attribution Modeling"]
+    }
+  },
+  {
+    "id": 4,
+    "slug": "the-fortress",
+    "title": "The Fortress",
+    "subtitle": "Edge Security Overhaul with Cloudflare",
+    "category": "Security & Performance",
+    "tags": ["Security", "Cloudflare", "WAF", "Performance", "Edge Computing"],
+    "icon": "Castle",
+    "description": "A proactive, multi-layered defense strategy that neutralized threats, reduced server load, and enhanced performance at the edge.",
+    "impact": "86% cache hit ratio, 85K+ malicious hits blocked monthly",
+    "featured": false,
+    "details": {
+      "challenge": "High-traffic WordPress site under constant siege from bots, brute-force attacks, and scrapers causing server strain and security vulnerabilities.",
+      "solution": "Comprehensive Cloudflare security implementation with WAF, rate limiting, Bot Fight Mode, and tiered caching for proactive edge-first defense.",
+      "technologies": ["Cloudflare", "WAF", "Edge Computing", "Rate Limiting", "Bot Protection"]
+    }
+  },
+  {
+    "id": 5,
+    "slug": "the-conductor",
+    "title": "The Conductor",
+    "subtitle": "Events Hub & Instructor Tools",
+    "category": "Operations & Tools",
+    "tags": ["Dashboard", "Events", "Instructor Tools", "Data Aggregation", "Operations"],
+    "icon": "BarChart3",
+    "description": "A unified administrative dashboard for data-driven event management and instructor empowerment with real-time insights.",
+    "impact": "Time-to-insight reduced from hours to minutes",
+    "featured": false,
+    "details": {
+      "challenge": "Events team and instructors lacked centralized, real-time view of event performance, making it difficult to identify at-risk courses and prepare effectively.",
+      "solution": "Built unified Events Hub consolidating LearnDash, WooCommerce, and FluentCRM data with enrollment velocity indicators and detailed attendee breakdowns.",
+      "technologies": ["LearnDash", "WooCommerce", "FluentCRM", "REST API", "Custom Dashboard"]
+    }
+  },
+  {
+    "id": 6,
+    "slug": "the-engine-room",
+    "title": "The Engine Room",
+    "subtitle": "Training Lifecycle Automation",
+    "category": "Automation & Integration",
+    "tags": ["Automation", "Integration", "Lifecycle", "WooCommerce", "LearnDash"],
+    "icon": "Cog",
+    "description": "An end-to-end automated system that creates a seamless student journey from purchase to certification with zero manual intervention.",
+    "impact": "Near-zero certificate delays, notable decrease in support tickets",
+    "featured": false,
+    "details": {
+      "challenge": "Fragmented student journey requiring manual intervention between WooCommerce purchases, LearnDash enrollment, and CRM segmentation.",
+      "solution": "Architected fully integrated automation pipeline connecting purchase → enrollment → evaluation → certification with automatic tagging and CRM updates.",
+      "technologies": ["WooCommerce", "LearnDash", "Gravity Forms", "WP Fusion", "FluentCRM"]
+    }
+  },
+  {
+    "id": 7,
+    "slug": "the-closer",
+    "title": "The Closer",
+    "subtitle": "Quote-to-Order System with Payment Plans",
+    "category": "Sales & Payments",
+    "tags": ["Sales", "Payments", "Stripe", "Quote System", "Revenue"],
+    "icon": "CreditCard",
+    "description": "A seamless, automated system that reduces sales friction and unlocks new revenue opportunities through flexible payment options.",
+    "impact": "Significantly increased close rate on phone orders",
+    "featured": false,
+    "details": {
+      "challenge": "Manual phone-based sales process was clunky with high-value quotes stalling due to payment friction and lack of flexible options.",
+      "solution": "Advanced quote-to-order system with Gravity Forms generating WooCommerce orders and Stripe integration for 3-18 month payment plans.",
+      "technologies": ["Gravity Forms", "WooCommerce", "Stripe", "Payment Plans", "ACF"]
+    }
+  },
+  {
+    "id": 8,
+    "slug": "the-accelerator",
+    "title": "The Accelerator",
+    "subtitle": "Edge Image Optimization Pipeline",
+    "category": "Performance & Optimization",
+    "tags": ["Performance", "Images", "Edge Computing", "LCP", "Optimization"],
+    "icon": "Zap",
+    "description": "AVIF/WebP at the edge for instant LCP wins on media-heavy pages through intelligent format negotiation and caching.",
+    "impact": "200-500ms faster LCP on image-heavy pages",
+    "featured": false,
+    "details": {
+      "challenge": "Large hero images and galleries crushing LCP and CLS metrics, with traditional plugin-based optimization insufficient for performance needs.",
+      "solution": "Built edge worker for device-aware format negotiation (AVIF/WebP/JPEG), DPR-based resizing, and intelligent caching by device/locale.",
+      "technologies": ["Edge Workers", "AVIF/WebP", "Image Optimization", "CDN", "Performance"]
+    }
+  },
+  {
+    "id": 9,
+    "slug": "the-safety-net",
+    "title": "The Safety Net",
+    "subtitle": "CI/CD for WordPress",
+    "category": "DevOps & Deployment",
+    "tags": ["CI/CD", "WordPress", "GitHub Actions", "Deployment", "DevOps"],
+    "icon": "GitBranch",
+    "description": "Versioned, testable deployments with instant rollback capabilities for reliable and confident WordPress releases.",
+    "impact": "Mean-time-to-recover dropped to minutes",
+    "featured": false,
+    "details": {
+      "challenge": "Manual FTP deploys were risky and slow, with theme builds, plugin updates, and DB changes happening ad hoc, making recovery difficult.",
+      "solution": "Set up GitHub Actions pipeline with asset building, smoke tests, health checks, rsync deployment, and automatic rollback on failure.",
+      "technologies": ["GitHub Actions", "WP-CLI", "CI/CD", "Automated Testing", "Deployment"]
+    }
+  },
+  {
+    "id": 10,
+    "slug": "the-shield",
+    "title": "The Shield",
+    "subtitle": "Enterprise-Grade Security Overhaul",
+    "category": "Security & Infrastructure",
+    "tags": ["Security", "Infrastructure", "DNSSEC", "Edge Defense", "Bot Protection"],
+    "icon": "Shield",
+    "description": "Multi-layered defense-in-depth strategy protecting against brute-force attacks and malicious bots while maintaining platform stability.",
+    "impact": "85,000+ malicious hits blocked monthly",
+    "featured": true,
+    "details": {
+      "challenge": "Site under constant siege from brute-force attacks and malicious bots, inflating server load and threatening user data during critical campaigns.",
+      "solution": "Architected comprehensive edge defense with Cloudflare WAF, origin hardening, encrypted tunnels, and DNSSEC implementation.",
+      "technologies": ["Cloudflare", "WAF", "DNSSEC", "Apache", "Origin CA"]
+    }
+  },
+  {
+    "id": 11,
+    "slug": "the-optimizer",
+    "title": "The Optimizer",
+    "subtitle": "Full-Stack Performance Optimization",
+    "category": "Performance & Reliability",
+    "tags": ["Performance", "Caching", "Core Web Vitals", "CDN", "Optimization"],
+    "icon": "Zap",
+    "description": "Comprehensive optimization addressing performance from server to browser with multi-tier caching and advanced compression.",
+    "impact": "70% improvement in repeat-visit speeds",
+    "featured": true,
+    "details": {
+      "challenge": "Heavy pages and unoptimized assets causing slow load times, poor Core Web Vitals, and increased bounce rates hurting conversions.",
+      "solution": "Engineered multi-tier caching system with payload reduction, CDN offloading, and orchestrated browser/LiteSpeed/Cloudflare caching layers.",
+      "technologies": ["Cloudflare", "LiteSpeed Cache", "Brotli", "CDN", "Critical CSS"]
+    }
+  },
+  {
+    "id": 12,
+    "slug": "the-analyst",
+    "title": "The Analyst",
+    "subtitle": "Unified Marketing Analytics Stack",
+    "category": "Analytics & Attribution",
+    "tags": ["Analytics", "GTM", "GA4", "Attribution", "Marketing"],
+    "icon": "BarChart3",
+    "description": "Complete analytics rebuild creating single source of truth for conversion data and eliminating attribution drift.",
+    "impact": "Significant improvement in marketing efficiency and ROAS",
+    "featured": false,
+    "details": {
+      "challenge": "Fragmented and unreliable analytics leading to attribution drift, wasted ad spend, and inability to make confident data-driven decisions.",
+      "solution": "Rebuilt entire measurement stack in GTM with legacy tag removal, GA4 consolidation, and standardized conversion events across touchpoints.",
+      "technologies": ["Google Tag Manager", "GA4", "WooCommerce", "Gravity Forms", "Smart Bidding"]
+    }
+  },
+  {
+    "id": 13,
+    "slug": "the-qualifier",
+    "title": "The Qualifier",
+    "subtitle": "Intelligent Lead Conversion Tracking",
+    "category": "Marketing & Conversions",
+    "tags": ["Lead Qualification", "Conversions", "PHP", "GTM", "Smart Bidding"],
+    "icon": "Target",
+    "description": "Refined conversion model distinguishing high-value leads from low-intent inquiries for optimized ad spend allocation.",
+    "impact": "Dramatically improved conversion accuracy and lead quality",
+    "featured": false,
+    "details": {
+      "challenge": "Analytics treating all form submissions equally, causing Google Ads to waste budget on low-intent inquiries instead of marketing-qualified leads.",
+      "solution": "Built custom PHP hook firing detailed events to dataLayer with GTM RegEx triggers filtering for high-value form IDs and MQL conversion actions.",
+      "technologies": ["PHP", "Google Tag Manager", "RegEx", "Google Ads", "Conversion Tracking"]
+    }
+  },
+  {
+    "id": 14,
+    "slug": "the-navigator",
+    "title": "The Navigator",
+    "subtitle": "Dynamic & Interactive Event Maps",
+    "category": "Frontend & UX",
+    "tags": ["Frontend", "UX", "Google Maps", "JavaScript", "User Experience"],
+    "icon": "Map",
+    "description": "Modern interactive map experience replacing static event listings with visual discovery and filtering capabilities.",
+    "impact": "Significant increase in user engagement and training signups",
+    "featured": false,
+    "details": {
+      "challenge": "Static, text-heavy event directory frustrating for clinicians to navigate, leading to drop-off during discovery and lost registrations.",
+      "solution": "Built interactive Google Maps experience with geocoded events, visual browsing by location/date/type, and seamless filtering logic.",
+      "technologies": ["Google Maps API", "JavaScript", "WordPress CPT", "Geocoding", "Frontend"]
+    }
+  },
+  {
+    "id": 15,
+    "slug": "the-stabilizer",
+    "title": "The Stabilizer",
+    "subtitle": "Backend Reliability & Server Tuning",
+    "category": "Infrastructure & Reliability",
+    "tags": ["Backend", "Server Tuning", "PHP", "Monitoring", "Reliability"],
+    "icon": "Server",
+    "description": "Deep server-level optimization eliminating 503/504 errors and PHP memory exhaustion for stable operations.",
+    "impact": "Critical backend errors eliminated, platform stability restored",
+    "featured": false,
+    "details": {
+      "challenge": "Frequent 503/504 errors and PHP memory exhaustion crashing plugins during business hours and interrupting workflows.",
+      "solution": "Conducted comprehensive server optimization with PHP-FPM tuning, Apache configuration, PHP 8.3 upgrade, and Netdata monitoring with alerts.",
+      "technologies": ["PHP-FPM", "Apache", "Netdata", "PHP 8.3", "Server Monitoring"]
+    }
   }
 ]

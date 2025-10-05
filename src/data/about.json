@@ -1,0 +1,136 @@
+{
+  "principles": [
+    { 
+      "icon": "Bridge", 
+      "title": "Bridge Builder", 
+      "subtitle": "Connecting Vision with Reality", 
+      "stat": "50+ cross-functional projects" 
+    },
+    { 
+      "icon": "CircuitBoard", 
+      "title": "Systems Thinker", 
+      "subtitle": "Building Infrastructure that Scales" 
+    },
+    { 
+      "icon": "Gauge", 
+      "title": "Performance Optimizer", 
+      "subtitle": "Measurable Results Drive Everything" 
+    },
+    { 
+      "icon": "Users", 
+      "title": "Collaborative Leader", 
+      "subtitle": "Empowering Teams Through Technology" 
+    }
+  ],
+  "stackTiles": [
+    { 
+      "title": "AI-Powered Support Systems", 
+      "desc": "CRM-aware chatbots reducing tickets 70%.", 
+      "href": "/case-studies/the-launchpad" 
+    },
+    { 
+      "title": "Enterprise Security Overhaul", 
+      "desc": "Multi-layered defense blocking 85K+ threats monthly.", 
+      "href": "/case-studies/the-shield" 
+    },
+    { 
+      "title": "Full-Stack Performance Optimization", 
+      "desc": "70% faster repeat visits through caching.", 
+      "href": "/case-studies/the-optimizer" 
+    },
+    { 
+      "title": "Unified Marketing Analytics", 
+      "desc": "Clean attribution improving ROAS significantly.", 
+      "href": "/case-studies/the-analyst" 
+    },
+    { 
+      "title": "Intelligent Lead Qualification", 
+      "desc": "Smart conversion tracking for quality leads.", 
+      "href": "/case-studies/the-qualifier" 
+    },
+    { 
+      "title": "Interactive Event Maps", 
+      "desc": "Visual discovery boosting training signups.", 
+      "href": "/case-studies/the-navigator" 
+    },
+    { 
+      "title": "Backend Reliability & Tuning", 
+      "desc": "Server optimization eliminating critical errors.", 
+      "href": "/case-studies/the-stabilizer" 
+    },
+    { 
+      "title": "Edge Security & Caching", 
+      "desc": "Cloudflare fortress with 86% cache hit ratio.", 
+      "href": "/case-studies/the-fortress" 
+    },
+    { 
+      "title": "Payment Plans & Quote Systems", 
+      "desc": "Flexible financing increasing close rates.", 
+      "href": "/case-studies/the-closer" 
+    }
+  ],
+  "timeline": [
+    {
+      "period": "2023 — Present",
+      "role": "Marketing Director & System Architect",
+      "org": "Graston Technique®",
+      "industry": "Healthcare Education & Medical Devices (B2B & B2C)",
+      "bullets": [
+        "Built 400+ automations across lifecycle flows.",
+        "Deployed GPT-powered assistant for support.",
+        "Optimized performance with edge caching.",
+        "Provider analytics syncing with GA4."
+      ],
+      "tech": ["LearnDash","WooCommerce","WP Fusion","FluentCRM","WordPress","GA4","OpenAI"]
+    },
+    {
+      "period": "2023",
+      "role": "Interim Director of Marketing",
+      "org": "Ultimate Technologies Group",
+      "industry": "B2B Technology & AV Integration",
+      "bullets": [
+        "Streamlined lead gen workflows.",
+        "Improved GTM tracking & attribution.",
+        "40% faster campaign production timelines."
+      ],
+      "tech": ["GTM","CRM","Attribution"]
+    },
+    {
+      "period": "2015 — 2023",
+      "role": "Marketing Manager → Administrator",
+      "org": "Riley Bennett Egloff, LLP",
+      "industry": "B2B Legal Services",
+      "bullets": [
+        "Digital rebrand + technical SEO overhaul.",
+        "35% increase in qualified client inquiries.",
+        "Quarterly RBE Magazine; thought leadership."
+      ],
+      "tech": ["SEO","CMS","Brand Strategy"]
+    }
+  ],
+  "partnerships": [
+    { 
+      "client": "Pike Medical / UCI & PCI", 
+      "context": "B2C Healthcare", 
+      "results": ["Online check-in integration", "Telehealth", "45% growth in visits", "Local SEO + Ads"] 
+    },
+    { 
+      "client": "Russell Painting Company", 
+      "context": "B2C Home Services", 
+      "results": ["Trust-focused design", "4.9/5 ratings featured", "Story-led content", "Lead gen lift"] 
+    },
+    { 
+      "client": "Tuohy Bailey & Moore LLP", 
+      "context": "B2B Legal", 
+      "results": ["Rebranding", "Brand playbook", "Website redesign", "Positioned for high-value clients"] 
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "Jacob transformed our marketing operations from chaos to precision. The attribution model he built increased ROI visibility by 300%.",
+      "author": "Sarah Chen",
+      "title": "VP of Marketing, TechFlow Solutions",
+      "meta": "Project: Marketing Attribution Platform"
+    }
+  ]
+}

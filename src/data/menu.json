@@ -1,0 +1,48 @@
+{
+  "columns": [
+    {
+      "label": "About",
+      "links": [
+        { "label": "My Story", "href": "/about#story" },
+        { "label": "Principles", "href": "/about#principles" },
+        { "label": "MarTech Stack", "href": "/about#stack" },
+        { "label": "Professional Journey", "href": "/about#journey" },
+        { "label": "Partnerships", "href": "/about#partnerships" },
+        { "label": "Testimonials", "href": "/about#testimonials" }
+      ]
+    },
+    {
+      "label": "Case Studies",
+      "links": [
+        { "label": "Browse All", "href": "/case-studies" },
+        { "label": "The Shield", "href": "/deep/the-shield" },
+        { "label": "The Optimizer", "href": "/deep/the-optimizer" },
+        { "label": "The Analyst", "href": "/deep/the-analyst" },
+        { "label": "The Launchpad", "href": "/deep/the-launchpad" },
+        { "label": "The Fortress", "href": "/deep/the-fortress" }
+      ]
+    },
+    {
+      "label": "Projects & Tools",
+      "links": [
+        { "label": "Technical Projects", "href": "/projects" },
+        { "label": "My Toolbox", "href": "/toolbox" },
+        { "label": "Automation & CRM", "href": "/toolbox#automation" },
+        { "label": "Analytics & Tracking", "href": "/toolbox#analytics" },
+        { "label": "Performance & Infra", "href": "/toolbox#performance" },
+        { "label": "Dev & Systems", "href": "/toolbox#dev" }
+      ]
+    },
+    {
+      "label": "Connect",
+      "links": [
+        { "label": "Contact Form", "href": "/contact" },
+        { "label": "Download CV", "href": "/cv" },
+        { "label": "View Resume", "href": "/resume" },
+        { "label": "LinkedIn", "href": "https://linkedin.com/in/jacobdarling" },
+        { "label": "GitHub", "href": "https://github.com/jdarlingGT" },
+        { "label": "Email", "href": "mailto:hoosierdarling@gmail.com" }
+      ]
+    }
+  ]
+}

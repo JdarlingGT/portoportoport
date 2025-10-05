@@ -1,3 +1,112 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #404040;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #606060;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  outline: 2px solid #00FFFF;
+  outline-offset: 2px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .text-slate-400 {
+    color: #ffffff !important;
+  }
+  
+  .border-white\/10 {
+    border-color: #ffffff !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body { 
+    -webkit-print-color-adjust: exact; 
+    print-color-adjust: exact; 
+    background: white !important;
+    color: black !important;
+  }
+  a { 
+    color: inherit; 
+    text-decoration: none; 
+  }
+  .print\:hidden { 
+    display: none !important; 
+  }
+  .print\:grid-cols-1 { 
+    grid-template-columns: 1fr !important; 
+  }
+  .print\:text-black {
+    color: black !important;
+  }
+  .print\:text-gray-600 {
+    color: #4b5563 !important;
+  }
+  .print\:bg-black {
+    background-color: black !important;
+  }
+  .print\:border-black {
+    border-color: black !important;
+  }
+  .print\:text-3xl {
+    font-size: 1.875rem !important;
+    line-height: 2.25rem !important;
+  }
+  .print\:text-lg {
+    font-size: 1.125rem !important;
+    line-height: 1.75rem !important;
+  }
+  .print\:text-base {
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
+  }
+  .print\:text-sm {
+    font-size: 0.875rem !important;
+    line-height: 1.25rem !important;
+  }
+  .print\:mb-8 {
+    margin-bottom: 2rem !important;
+  }
+  .print\:mb-6 {
+    margin-bottom: 1.5rem !important;
+  }
+  .print\:space-y-4 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 1rem !important;
+  }
+}
