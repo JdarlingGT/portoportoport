@@ -20,8 +20,9 @@ import Footer from './components/layout/Footer';
 function useGA(){
   const { pathname, search } = useLocation();
   useEffect(() => {
-    // @ts-ignore
-    if (window.gtag) window.gtag('config', 'G-XXXX', { page_path: pathname + search });
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('config', 'G-XXXX', { page_path: pathname + search });
+    }
   }, [pathname, search]);
 }
 
