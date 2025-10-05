@@ -42,6 +42,14 @@
       ]
     },
     {
+      "label": "Live Apps",
+      "links": [
+        { "label": "Clinical Compass", "href": "/apps/clinical-compass" },
+        { "label": "ROI Calculator", "href": "/apps/roi" },
+        { "label": "License Requirements", "href": "/apps/license" }
+      ]
+    },
+    {
       "label": "Connect",
       "links": [
         { "label": "Contact Form", "href": "/contact" },

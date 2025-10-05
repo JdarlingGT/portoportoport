@@ -9,6 +9,11 @@ import CaseStudies from './pages/CaseStudies';
 import DeepDive from './pages/DeepDive';
 import Projects from './pages/Projects';
 import ProjectDetail from './pages/ProjectDetail';
+
+// Import Live Apps Pages
+import ClinicalCompass from './pages/apps/ClinicalCompass';
+import ROICalculator from './pages/apps/ROICalculator';
+import LicenseRequirements from './pages/apps/LicenseRequirements';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
@@ -66,6 +71,11 @@ function App() {
           <Route path="/deep/:slug" element={<DeepDive />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:id" element={<ProjectDetail />} />
+          
+          {/* Live Apps Routes */}
+          <Route path="/apps/clinical-compass" element={<ClinicalCompass />} />
+          <Route path="/apps/roi" element={<ROICalculator />} />
+          <Route path="/apps/license" element={<LicenseRequirements />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/cv" element={<Navigate to="/resume" replace />} />
           <Route path="/contact" element={<Contact />} />

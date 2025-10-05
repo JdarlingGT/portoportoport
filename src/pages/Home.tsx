@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, User, Briefcase, Wrench, Star } from 'lucide-react';
 import { slideUp, staggerContainer } from '../styles/animations';
+import LiveApps from '../sections/LiveApps';
 
 const valueBlocks = [
   {
@@ -180,6 +181,9 @@ const Home = () => {
           </div>
         </div>
       </motion.section>
+
+      {/* Live Apps Section */}
+      <LiveApps />
 
       {/* CTA Section */}
       <motion.section 

@@ -8,10 +8,6 @@ interface MenuLink {
   href: string;
 }
 
-interface MenuColumn {
-  label: string;
-  links: MenuLink[];
-}
 
 const MegaMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,10 +42,10 @@ const MegaMenu = () => {
               transition={{ duration: 0.2 }}
               onMouseEnter={() => setIsOpen(true)}
               onMouseLeave={() => setIsOpen(false)}
-              className="absolute top-full left-0 mt-2 w-[500px] bg-black/90 backdrop-blur-lg border border-white/10 rounded-xl shadow-2xl z-50"
+              className="absolute top-full left-0 mt-2 w-[600px] bg-black/90 backdrop-blur-lg border border-white/10 rounded-xl shadow-2xl z-50 p-6"
             >
-              <div className="grid grid-cols-4 gap-6 p-6">
-                {menuConfig.columns.map((column: MenuColumn) => (
+              <div className="grid grid-cols-5 gap-6">
+                {menuConfig.columns.map((column) => (
                   <div key={column.label} className="space-y-3">
                     <h3 className="text-white font-bold text-sm uppercase tracking-wide">
                       {column.label}
