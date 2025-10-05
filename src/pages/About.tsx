@@ -42,7 +42,12 @@ export default function About() {
               <a href="/resume" className="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 transition-colors">Download Résumé</a>
             </div>
 
-            <HighlightChips />
+            <HighlightChips chips={[
+              "70% support ticket reduction",
+              "40% e-commerce lift", 
+              "86% cache hit rate",
+              "Unified data pipeline (web → LMS → CRM → analytics)"
+            ]} />
           </motion.div>
         </div>
       </section>

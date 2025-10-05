@@ -113,11 +113,24 @@ export default function Toolbox() {
                 variants={slideUp}
               >
                 <h3 className="text-lg font-bold mb-4 text-cyan-400">{category}</h3>
-                <ul className="space-y-2">
-                  {(technologies as string[]).map((tech) => (
-                    <li key={tech} className="text-slate-300 text-sm flex items-center">
-                      <span className="w-1.5 h-1.5 bg-slate-400 rounded-full mr-3 flex-shrink-0"></span>
-                      {tech}
+                <ul className="space-y-3">
+                  {technologies.map((tool: any, index: number) => (
+                    <li key={index} className="text-slate-300 text-sm">
+                      <div className="flex items-start space-x-3">
+                        <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></span>
+                        <div>
+                          <div className="font-semibold text-white">{tool.name}</div>
+                          <div className="text-xs text-slate-400 mt-1">{tool.why}</div>
+                          {tool.link && (
+                            <a 
+                              href={tool.link} 
+                              className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors"
+                            >
+                              View Case Study →
+                            </a>
+                          )}
+                        </div>
+                      </div>
                     </li>
                   ))}
                 </ul>
