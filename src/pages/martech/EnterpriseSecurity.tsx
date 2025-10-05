@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { ArrowLeft, Shield, TrendingUp, Clock, CheckCircle, AlertTriangle, Zap, Lock, Globe, Server } from "lucide-react";
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { Shield, Lock, ArrowLeft, CheckCircle, AlertTriangle, Zap, Clock, TrendingUp, Globe } from 'lucide-react';
 
 export default function EnterpriseSecurity() {
   return (

@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { ArrowLeft, Zap, TrendingUp, Clock, CheckCircle, BarChart3, Globe, Server, Layers } from "lucide-react";
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { Zap, ArrowLeft, TrendingUp, Clock, BarChart3, Globe, Server, Layers } from 'lucide-react';
 
 export default function PerformanceOptimization() {
   return (

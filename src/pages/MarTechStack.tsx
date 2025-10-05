@@ -1,7 +1,6 @@
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { Shield, Zap, BarChart3, Target, Map, Server, ArrowRight, TrendingUp } from "lucide-react";
-import { TechGridPattern, FloatingParticles } from "../components/ui/BackgroundPatterns";
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { Shield, Zap, BarChart3, Target, Map, Server, ExternalLink, ArrowRight } from 'lucide-react';
 
 const projects = [
   {
@@ -120,22 +119,21 @@ export default function MarTechStack() {
           >
             🚀 My Interactive MarTech Stack
           </motion.div>
-        </motion.div>
-        
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 relative z-10">
             I don't just use tools—<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
               I build integrated ecosystems
             </span>
           </h1>
           
-          <p className="text-xl text-slate-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+          <p className="text-xl text-slate-300 max-w-4xl mx-auto mb-8 leading-relaxed relative z-10">
             Each project represents a complete solution architected from the ground up, 
             combining multiple technologies to solve complex business challenges and deliver measurable results.
           </p>
 
           {/* Stats */}
-          <div className="flex justify-center gap-8 mb-12">
+          <div className="flex justify-center gap-8 mb-12 relative z-10">
             <div className="text-center">
               <div className="text-3xl font-bold text-cyan-400">{projects.length}</div>
               <div className="text-sm text-slate-400">Complete Solutions</div>
