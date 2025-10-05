@@ -1,143 +1,331 @@
 import { motion } from 'framer-motion';
-import { Zap, Shield, BarChart3, Settings } from 'lucide-react';
-import toolboxData from "../data/toolbox.json";
-import { slideUp, staggerContainer } from '../styles/animations';
+import { useState } from 'react';
+import { ExternalLink, Linkedin } from 'lucide-react';
+import toolboxData from '../data/toolbox.json';
 
-const competencyIcons = [Zap, Shield, BarChart3, Settings];
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+};
+
+const slideUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
 
 export default function Toolbox() {
+  const [activeTab, setActiveTab] = useState('strengths');
+
   return (
     <main className="min-h-screen bg-[#0F0F0F] text-white">
-      <div className="max-w-6xl mx-auto px-6 py-20">
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        {/* Hero Section */}
+        <motion.section 
+          className="mb-16"
+          initial="hidden"
+          animate="visible"
+          variants={fadeIn}
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Toolbox</h1>
-          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            The systems, strategies, and technologies I use to build marketing infrastructure that scales
-          </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <motion.div 
+                className="inline-block px-4 py-2 bg-cyan-400/10 border border-cyan-400/20 rounded-full text-cyan-400 text-sm font-semibold mb-6"
+                variants={slideUp}
+              >
+                🛠️ Professional Toolbox
+              </motion.div>
+              
+              <motion.h1 
+                className="text-4xl md:text-6xl font-bold mb-6"
+                variants={slideUp}
+              >
+                Tools I <span className="text-cyan-400">Reach For</span>
+              </motion.h1>
+              
+              <motion.p 
+                className="text-xl text-slate-300 mb-8 leading-relaxed"
+                variants={slideUp}
+              >
+                A comprehensive overview of my technical expertise and professional capabilities. From strategy and architecture to problem-solving and scalable marketing systems.
+              </motion.p>
+              
+              <motion.div 
+                className="flex flex-wrap gap-4 mb-8"
+                variants={slideUp}
+              >
+                <button className="bg-cyan-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-cyan-300 transition-colors flex items-center gap-2">
+                  <Linkedin className="w-4 h-4" />
+                  Connect on LinkedIn
+                </button>
+                <button className="border border-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors flex items-center gap-2">
+                  <ExternalLink className="w-4 h-4" />
+                  View Profile
+                </button>
+              </motion.div>
+            </div>
+            
+            <motion.div 
+              className="relative"
+              variants={slideUp}
+            >
+              <div className="w-full max-w-md mx-auto">
+                <img 
+                  src="/assets/personal/professional-headshot.jpg" 
+                  alt="Jacob Darling - Professional Headshot"
+                  className="w-full rounded-2xl shadow-2xl border border-white/10"
+                />
+              </div>
+            </motion.div>
+          </div>
+        </motion.section>
+
+        {/* Tab Navigation */}
+        <motion.div 
+          className="flex flex-wrap justify-center gap-4 mb-12"
+          initial="hidden"
+          animate="visible"
+          variants={staggerContainer}
+        >
+          {[
+            { id: 'strengths', label: 'Core Strengths' },
+            { id: 'spotlights', label: 'Technical Spotlights' },
+            { id: 'playbooks', label: 'My Playbooks' },
+            { id: 'stack', label: 'My Stack' }
+          ].map((tab) => (
+            <motion.button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                activeTab === tab.id
+                  ? 'bg-cyan-400 text-black'
+                  : 'bg-white/10 text-white hover:bg-white/20'
+              }`}
+              variants={slideUp}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {tab.label}
+            </motion.button>
+          ))}
         </motion.div>
 
-        {/* Core Competencies */}
-        <motion.section 
-          id="competencies"
-          className="mb-20"
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-        >
-          <motion.h2 className="text-3xl font-bold mb-12 text-center" variants={slideUp}>
-            Core Competencies
-          </motion.h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {toolboxData.competencies.map((competency, index) => {
-              const IconComponent = competencyIcons[index];
-              return (
+        {/* Content Sections */}
+        {activeTab === 'strengths' && (
+          <motion.section
+            key="strengths"
+            initial="hidden"
+            animate="visible"
+            variants={staggerContainer}
+            className="mb-16"
+          >
+            <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">
+              Core Strengths
+            </h2>
+            <p className="text-center text-slate-300 mb-12 max-w-3xl mx-auto">
+              What I'm hired to do. These are the foundational capabilities that drive results and solve complex technical challenges.
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {toolboxData.competencies.map((competency: any, index: number) => (
+                <motion.div
+                  key={index}
+                  className="p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-300"
+                  variants={slideUp}
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="text-cyan-400 text-4xl mb-4">
+                    {competency.icon || '🔧'}
+                  </div>
+                  <h3 className="text-xl font-bold mb-4 text-white">
+                    {competency.title}
+                  </h3>
+                  <p className="text-slate-300 mb-4 leading-relaxed">
+                    {competency.description}
+                  </p>
+                  {competency.highlights && (
+                    <ul className="space-y-2">
+                      {competency.highlights.map((highlight: string, idx: number) => (
+                        <li key={idx} className="text-sm text-slate-400 flex items-start">
+                          <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                          {highlight}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </motion.div>
+              ))}
+            </div>
+          </motion.section>
+        )}
+
+        {activeTab === 'spotlights' && (
+          <motion.section
+            key="spotlights"
+            initial="hidden"
+            animate="visible"
+            variants={staggerContainer}
+            className="mb-16"
+          >
+            <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">
+              Technical Spotlights
+            </h2>
+            <p className="text-center text-slate-300 mb-12 max-w-3xl mx-auto">
+              From problem to impact. Real examples of technical problem-solving that showcase strategic thinking and execution.
+            </p>
+            <div className="space-y-8">
+              {toolboxData.spotlights.map((spotlight: any, index: number) => (
+                <motion.div
+                  key={index}
+                  className="p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl"
+                  variants={slideUp}
+                >
+                  <h3 className="text-2xl font-bold mb-6 text-white">
+                    {spotlight.title}
+                  </h3>
+                  <div className="grid md:grid-cols-3 gap-8">
+                    <div>
+                      <h4 className="text-red-400 font-semibold mb-3 flex items-center">
+                        🔴 Problem
+                      </h4>
+                      <p className="text-slate-300 text-sm leading-relaxed">
+                        {spotlight.problem}
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="text-blue-400 font-semibold mb-3 flex items-center">
+                        🔵 Action
+                      </h4>
+                      <p className="text-slate-300 text-sm leading-relaxed">
+                        {spotlight.action}
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="text-green-400 font-semibold mb-3 flex items-center">
+                        🟢 Impact
+                      </h4>
+                      <p className="text-slate-300 text-sm leading-relaxed">
+                        {spotlight.impact}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.section>
+        )}
+
+        {activeTab === 'stack' && (
+          <motion.section
+            key="stack"
+            initial="hidden"
+            animate="visible"
+            variants={staggerContainer}
+            className="mb-16"
+          >
+            <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">
+              My Stack
+            </h2>
+            <p className="text-center text-slate-300 mb-12 max-w-3xl mx-auto">
+              Tools I reach for. A comprehensive, sustainable list of my technical toolkit across all areas of expertise.
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {Object.entries(toolboxData.stack).map(([category, technologies]) => (
                 <motion.div 
-                  key={competency.title}
+                  key={category}
                   className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl"
                   variants={slideUp}
                 >
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mr-4">
-                      <IconComponent className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold">{competency.title}</h3>
-                  </div>
-                  <p className="text-slate-400 leading-relaxed">{competency.description}</p>
-                </motion.div>
-              );
-            })}
-          </div>
-        </motion.section>
-
-        {/* Technical Spotlights */}
-        <motion.section 
-          id="spotlights"
-          className="mb-20"
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-        >
-          <motion.h2 className="text-3xl font-bold mb-12 text-center" variants={slideUp}>
-            Technical Spotlights
-          </motion.h2>
-          <div className="space-y-8">
-            {toolboxData.spotlights.map((spotlight) => (
-              <motion.div 
-                key={spotlight.title}
-                className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl"
-                variants={slideUp}
-              >
-                <h3 className="text-xl font-bold mb-4">{spotlight.title}</h3>
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div>
-                    <h4 className="text-sm font-semibold text-red-400 mb-2 uppercase tracking-wide">Problem</h4>
-                    <p className="text-slate-400 text-sm leading-relaxed">{spotlight.problem}</p>
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-semibold text-yellow-400 mb-2 uppercase tracking-wide">Action</h4>
-                    <p className="text-slate-400 text-sm leading-relaxed">{spotlight.action}</p>
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-semibold text-green-400 mb-2 uppercase tracking-wide">Result</h4>
-                    <p className="text-slate-400 text-sm leading-relaxed">{spotlight.result}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
-
-        {/* Technology Stack */}
-        <motion.section 
-          id="stack"
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-        >
-          <motion.h2 className="text-3xl font-bold mb-12 text-center" variants={slideUp}>
-            Technology Stack
-          </motion.h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {Object.entries(toolboxData.stack).map(([category, technologies]) => (
-              <motion.div 
-                key={category}
-                className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl"
-                variants={slideUp}
-              >
-                <h3 className="text-lg font-bold mb-4 text-cyan-400">{category}</h3>
-                <ul className="space-y-3">
-                  {technologies.map((tool: any, index: number) => (
-                    <li key={index} className="text-slate-300 text-sm">
-                      <div className="flex items-start space-x-3">
-                        <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></span>
-                        <div>
-                          <div className="font-semibold text-white">{tool.name}</div>
-                          <div className="text-xs text-slate-400 mt-1">{tool.why}</div>
-                          {tool.link && (
-                            <a 
-                              href={tool.link} 
-                              className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors"
-                            >
-                              View Case Study →
-                            </a>
-                          )}
+                  <h3 className="text-lg font-bold mb-4 text-cyan-400">{category}</h3>
+                  <ul className="space-y-3">
+                    {(technologies as any[]).map((tool: any, index: number) => (
+                      <li key={index} className="text-slate-300 text-sm">
+                        <div className="flex items-start space-x-3">
+                          <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></span>
+                          <div>
+                            <div className="font-semibold text-white">{tool.name}</div>
+                            <div className="text-xs text-slate-400 mt-1">{tool.why}</div>
+                            {tool.link && (
+                              <a 
+                                href={tool.link} 
+                                className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors"
+                              >
+                                View Case Study →
+                              </a>
+                            )}
+                          </div>
                         </div>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
+            </div>
+          </motion.section>
+        )}
+
+        {activeTab === 'playbooks' && (
+          <motion.section
+            key="playbooks"
+            initial="hidden"
+            animate="visible"
+            variants={staggerContainer}
+            className="mb-16"
+          >
+            <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">
+              My Playbooks
+            </h2>
+            <p className="text-center text-slate-300 mb-12 max-w-3xl mx-auto">
+              Repeatable solutions for complex problems. Strategic frameworks that demonstrate maturity and scalable thinking.
+            </p>
+            <div className="grid md:grid-cols-2 gap-8">
+              {toolboxData.playbooks && toolboxData.playbooks.map((playbook: any, index: number) => (
+                <motion.div
+                  key={index}
+                  className="p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl"
+                  variants={slideUp}
+                >
+                  <h3 className="text-xl font-bold mb-4 text-white">
+                    {playbook.title}
+                  </h3>
+                  <p className="text-slate-300 mb-6 leading-relaxed">
+                    {playbook.description}
+                  </p>
+                  {playbook.steps && (
+                    <div className="space-y-3">
+                      <h4 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide">Key Steps</h4>
+                      <ul className="space-y-2">
+                        {playbook.steps.map((step: string, idx: number) => (
+                          <li key={idx} className="text-sm text-slate-400 flex items-start">
+                            <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            {step}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {playbook.link && (
+                    <a 
+                      href={playbook.link}
+                      className="inline-block mt-4 text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-semibold"
+                    >
+                      View Steps →
+                    </a>
+                  )}
+                </motion.div>
+              ))}
+            </div>
+          </motion.section>
+        )}
       </div>
     </main>
   );

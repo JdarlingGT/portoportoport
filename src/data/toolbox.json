@@ -1,40 +1,133 @@
 {
   "competencies": [
     {
-      "title": "Performance Engineering",
-      "description": "I optimize systems for speed and reliability—from edge caching strategies that achieve 86% hit rates to server-level tuning that eliminates bottlenecks under load."
+      "title": "Web Performance & Optimization",
+      "icon": "⚡",
+      "description": "I build robust web experiences that load fast and scale efficiently. From CDN strategy and cache layers to TTFB optimization, I handle the technical details that drive user engagement and conversion rates.",
+      "highlights": [
+        "CDN strategy, cache layers and TTFB optimization",
+        "Traffic handling systems for high-volume properties", 
+        "Core Web Vitals improvement and monitoring",
+        "Performance budgets and automated optimization"
+      ]
     },
     {
-      "title": "Security Architecture", 
-      "description": "I implement defense-in-depth strategies using WAF rules, bot mitigation, and data governance frameworks that protect while enabling growth."
+      "title": "Security & Resilience", 
+      "icon": "🛡️",
+      "description": "I architect defense-in-depth security systems with WAF rulesets, bot mitigation, rate limiting, and proactive monitoring. Security isn't an afterthought—it's built into the infrastructure.",
+      "highlights": [
+        "Layered defenses at the edge and origin",
+        "WAF rulesets, bot mitigation, and rate limiting",
+        "Security hardening and origin shielding",
+        "API key scanning and origin IP whitelisting"
+      ]
     },
     {
-      "title": "Analytics Engineering",
-      "description": "I build measurement systems that marketing teams actually trust—clean event schemas, proper attribution, and dashboards that drive decisions."
+      "title": "Analytics & Conversion Engineering",
+      "icon": "📊", 
+      "description": "I design and implement comprehensive tracking systems using GA4, GTM, and custom attribution models. Every user interaction is measured, analyzed, and optimized for business outcomes.",
+      "highlights": [
+        "GA4 events that actually drive business actions",
+        "GTM containers and marketing pixel coordination",
+        "Attribution tracking from the database up",
+        "Event tracking systems and post-training evaluations"
+      ]
     },
     {
-      "title": "DevOps & Automation",
-      "description": "I create reliable deployment pipelines, monitoring systems, and automation workflows that reduce manual work and increase confidence."
+      "title": "Commerce + Learning Systems Architecture",
+      "icon": "🏗️",
+      "description": "I architect complex WordPress builds that tie together commerce, learning, and CRM. WooCommerce + LearnDash + CRM integrations, with connections unlock certificates, and forms drive tags and segments.",
+      "highlights": [
+        "Complex WordPress builds connecting commerce, learning, and CRM",
+        "WooCommerce + LearnDash + CRM integrations",
+        "Connections unlock certificates and form-driven tags",
+        "Automated lifecycle workflows and segmentation"
+      ]
+    },
+    {
+      "title": "Ops, Dashboards & Content Systems",
+      "icon": "⚙️",
+      "description": "I build operational dashboards for events, processes, and instructors. I also create CMS/content boards, QA-prompt pipelines, and lightweight internal tools that help marketing teams ship consistent, high-quality content and reports much faster.",
+      "highlights": [
+        "Operational dashboards for events, processes, and instructors",
+        "CMS/content boards and QA-prompt pipelines", 
+        "Lightweight internal tools for marketing teams",
+        "High-quality content and reports delivery systems"
+      ]
     }
   ],
   "spotlights": [
     {
-      "title": "Lifecycle Automation Overhaul",
-      "problem": "Support tickets were climbing as users got lost between purchase and first success. Manual email campaigns weren't scaling.",
-      "action": "Built staged onboarding engine with WP Fusion + CRM integration, mapping user states to targeted nudges and help resources.",
-      "result": "70% reduction in support tickets, higher activation rates, clearer attribution for what moves users forward."
+      "title": "Performance Turnaround on a Busy WP Property",
+      "problem": "Site admin points out poor repair rates had been due to a broken database and general caching strategy.",
+      "action": "Audited and reviewed database automated caching, implemented a more intelligent frequency at the core with better compression, and tuned the TTFB/cache hit.",
+      "impact": "Admin reports massive ~50ms faster, and page speed CWV/session improved with better first-time visitor experience."
     },
     {
-      "title": "Analytics Signal Quality Recovery",
-      "problem": "Multiple dashboards showed different numbers. UTM tagging was inconsistent. Marketing decisions were delayed by data distrust.",
-      "action": "Created event dictionary, GTM templates, strict UTM governance, and server-side events to bypass ad blockers.",
-      "result": "Signal quality improved, modeling became stable, marketing gained confidence in attribution data."
+      "title": "Attribution That Trains Media the Right Way",
+      "problem": "Ad platforms were optimizing for weak signals, making all their campaigns as much conversion and working against.",
+      "action": "Re-designed Google Tag Manager as a centralized event model, created high-level events from server-side CRM events and post-training evaluations as a new very purchase and post-training evaluations as.",
+      "impact": "Lowered Cost Per Acquisition (CPA), delivered a higher Return On Ad Spend (ROAS), and delivered more future analytics with these have positive conversions."
     },
     {
-      "title": "Edge Performance & Security Stack",
-      "problem": "Traffic spikes caused slow pages and nervous infrastructure. Bot abuse was consuming resources.",
-      "action": "Implemented Cloudflare WAF/Bot rules, optimized cache policies, added rate limiting and performance monitoring.",
-      "result": "86% cache hit rate, faster TTFB, improved Core Web Vitals, fewer security incidents and downtime."
+      "title": "Edge-First Security Hardening",
+      "problem": "Manual security policy, WAF, API flows and login brute force attacks were testing server and security risks.",
+      "action": "Built automated defense at the CloudFlare edge, including rate limiting, WAF, associated bots on suspicious platforms, and provided bot management.",
+      "impact": "Attacks stopped reaching origin server, resulting in a dramatic decrease in origin server risk and costs in the logs."
+    },
+    {
+      "title": "Training Lifecycle Automation (Commerce → Learning → CRM)",
+      "problem": "Manual handoffs between sales, training, and marketing were causing delays in onboarding, certification tracking, and CRM segmentation.",
+      "action": "Implemented a fully automated end-to-end system where e-commerce purchases auto-enroll into learning groups, completion events auto-update CRM tags, and post-training surveys trigger PQRST back to directory eligibility.",
+      "impact": "Achieved near-certificate stopping, linear support tickets, and created segmentation across flows that accurately predict a user's real-time status."
+    }
+  ],
+  "playbooks": [
+    {
+      "title": "Evaluation → Tag → Cart",
+      "description": "A standardized flow where a form submission triggers an automation that tags the data to a spreadsheet, applies the correct tags in the CRM, starts a post-course email sequence, and unlocks the user's certificates.",
+      "steps": [
+        "Group membership change detection",
+        "Training metadata tracking", 
+        "CRM tag and segment application",
+        "Data state sync",
+        "Batch synchronization"
+      ],
+      "link": "/deep/the-qualifier"
+    },
+    {
+      "title": "Group Enrollment → CRM Sync",
+      "description": "An event-driven workflow where a change in a user's learning group membership automatically updates the relevant training metadata, applies the correct tags and segments in the CRM, and notifies the relevant internal teams.",
+      "steps": [
+        "Group membership change detection",
+        "Training metadata tracking",
+        "CRM tag and segment application", 
+        "Data state sync",
+        "Batch synchronization"
+      ],
+      "link": "/deep/the-navigator"
+    },
+    {
+      "title": "Completion → Directory Eligibility",
+      "description": "A combination of automated and manual checks that, when triggered, mark a user's training as complete in the CRM and make their status as 'eligible' in public-facing provider directories.",
+      "steps": [
+        "Completion event validation",
+        "Certification status update",
+        "Directory eligibility marking",
+        "Public profile activation",
+        "Notification workflows"
+      ]
+    },
+    {
+      "title": "Event Schema → Self-Serve Dashboards", 
+      "description": "A data architecture model where normalized event and venue fields are the single source of truth. A new list then pulls data from CRM, collects, and turns to surface critical KPIs like enrollment velocity and risk flags.",
+      "steps": [
+        "Event schema normalization",
+        "Venue field standardization", 
+        "CRM data integration",
+        "KPI calculation engine",
+        "Self-serve dashboard creation"
+      ]
     }
   ],
   "currentSetup": {
