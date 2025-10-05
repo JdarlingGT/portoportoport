@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Rocket, Shield, Compass, Castle, BarChart3, Cog, CreditCard, Zap, GitBranch, Target, MapPin, Server, Search, Filter, ArrowRight, Clock, TrendingUp } from "lucide-react";
+import { Rocket, Shield, Compass, Castle, BarChart3, Cog, CreditCard, Zap, GitBranch, Target, MapPin, Server, Search, Filter, ArrowRight, Clock, TrendingUp, Link2 } from "lucide-react";
 import data from "../data/caseStudies.json";
 import { slideUp, staggerContainer } from "../styles/animations";
 
@@ -175,6 +175,16 @@ export default function CaseStudies() {
                     ))}
                   </div>
                   
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <Clock className="w-4 h-4 text-slate-400" />
+                      <span className="text-slate-400 text-sm">8-12 min read</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Link2 className="w-4 h-4 text-cyan-400" />
+                      <span className="text-cyan-400 text-sm">Toolbox linked</span>
+                    </div>
+                  </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <TrendingUp className="w-4 h-4 text-green-400" />
