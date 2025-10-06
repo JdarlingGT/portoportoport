@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Users, Zap, Award, Target, Code, Settings, CheckCircle, Rocket } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import AnimatedHero from '../components/AnimatedHero';
 
 // Animation variants
 const staggerContainer = {
@@ -70,57 +71,8 @@ const stats = [
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#0F0F0F] text-white">
-      {/* Hero Section */}
-      <section className="relative pt-28 pb-20 px-6 overflow-hidden">
-        <div className="max-w-6xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-8"
-          >
-            <div className="space-y-4">
-              {/* Professional Photo */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="mx-auto w-32 h-32 mb-6"
-              >
-                <img
-                  src="/assets/personal/professional-headshot.jpg"
-                  alt="Jacob Darling - Professional Headshot"
-                  className="w-full h-full object-cover rounded-full border-4 border-cyan-400/20 shadow-2xl"
-                />
-              </motion.div>
-              
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-                <span className="block">Marketing Strategist</span>
-                <span className="block text-cyan-400">& Systems Architect</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto">
-                Bridging the gap between marketing vision and technical reality to drive measurable growth
-              </p>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/case-studies"
-                className="inline-flex items-center px-8 py-4 bg-cyan-400 text-black rounded-lg font-semibold hover:bg-cyan-300 transition-colors"
-              >
-                View Case Studies
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                to="/about"
-                className="inline-flex items-center px-8 py-4 border border-gray-600 rounded-lg font-semibold hover:border-gray-500 transition-colors"
-              >
-                Learn More About Me
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      {/* Animated Hero Section */}
+      <AnimatedHero />
 
       {/* Tech Pipeline Section */}
       <motion.section 
