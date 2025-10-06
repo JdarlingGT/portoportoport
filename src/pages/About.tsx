@@ -9,6 +9,7 @@ import TimelineVertical from "../sections/TimelineVertical";
 import Partnerships from "../sections/Partnerships";
 import TestimonialsCarousel from "../sections/TestimonialsCarousel";
 import CTACluster from "../sections/CTACluster";
+import { PhotoGallery } from "../components/PhotoGallery";
 import { fadeIn, slideUp, staggerContainer } from "../styles/animations";
 
 export default function About() {
@@ -21,6 +22,18 @@ export default function About() {
           <div className="hidden lg:block"><AnchorTOC /></div>
 
           <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true }} className="space-y-6">
+            {/* Professional Headshot */}
+            <motion.div variants={fadeIn} className="flex justify-center lg:justify-start mb-8">
+              <div className="relative">
+                <img 
+                  src="/assets/personal/professional-headshot.jpg" 
+                  alt="Jacob Darling - Professional Headshot"
+                  className="w-32 h-32 rounded-full object-cover border-4 border-cyan-400/20 shadow-2xl"
+                />
+                <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400/20 to-transparent"></div>
+              </div>
+            </motion.div>
+
             <motion.h1 variants={slideUp} className="text-4xl sm:text-5xl font-bold">
               Where Marketing Vision <span className="text-cyan-400">Meets Technical Reality</span>
             </motion.h1>
@@ -88,6 +101,11 @@ export default function About() {
           <h2 className="text-3xl font-semibold mb-6">Ongoing Strategic Partnerships</h2>
           <Partnerships />
         </div>
+      </section>
+
+      {/* PHOTO GALLERY */}
+      <section id="gallery" className="py-16 border-t border-white/5">
+        <PhotoGallery />
       </section>
 
       {/* TESTIMONIALS */}
