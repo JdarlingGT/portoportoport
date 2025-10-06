@@ -1,5 +1,5 @@
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import menuConfig from '../../data/menu.json';
 
@@ -32,7 +32,7 @@ const MegaMenu = () => {
         >
           Menu
         </button>
-        
+
         <AnimatePresence>
           {isOpen && (
             <motion.div
